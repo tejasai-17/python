@@ -35,12 +35,12 @@ def deleteNode(root_node, node_value):
     else:
         if root_node.leftChild is None:
             temp = root_node.rightChild
-            print("Element", node_value, "deleted successfully")
+            print("Element deleted successfully")
             return temp  
 
         if root_node.rightChild is None:
             temp = root_node.leftChild
-            print("Element", node_value, "deleted successfully")
+            print("Element deleted successfully")
             return temp  
 
         temp = minValueNode(root_node.rightChild)  

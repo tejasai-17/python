@@ -1,3 +1,5 @@
+import time
+start = time.perf_counter()
 class Node:
     def __init__(self, data):
         self.data = data
@@ -73,3 +75,7 @@ if __name__ == '__main__':
     
     print("linked list is")
     llist.printList()
+
+end = time.perf_counter()
+print("time taken: ",end-start)
+
