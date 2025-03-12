@@ -5,9 +5,9 @@ def display_hash(hashTable):
           
         for j in hashTable[i]:
             print("-->", end = " ")
-            print(j, end = " ")
-              
+            print(j, end = " ") 
         print()
+
 HashTable = [[] for _ in range(10)]
   
 def Hashing(keyvalue):

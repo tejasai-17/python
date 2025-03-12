@@ -2,7 +2,7 @@ graph = {'a':['b','d','e','f'],'d':['a'],'b':['a','f','c'],'f':['b','a'],'c':['b
 print ("Given Graph is:")
 print(graph)
 
-def dfs_traversal(input_graph,source):
+def dfs(input_graph,source):
     stack = list()
     visited_list = list()
     stack.append(source)
@@ -16,6 +16,6 @@ def dfs_traversal(input_graph,source):
                 visited_list.append(u)
 
 print("DFS traversal of graph with source A is: ")
-dfs_traversal(graph, "a")
+dfs(graph, "a")
 
 
