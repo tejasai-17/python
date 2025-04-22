@@ -300,3 +300,187 @@
 #     print("linked list is")
 #     llist.printList()
 
+# class stack:
+
+#     def __init__(self,maxsize,top):
+#         self.maxsize = maxsize
+#         self.top = top
+#         self.list = []
+
+#     def __str__(self):
+#         value = self.list.reverse()
+#         value = [str(x) for x in self.list]
+#         return '\n'.join(value)
+    
+#     def push(self,value):
+#         if self.top == self.maxsize:
+#             print("the stack is full")
+#         else:
+#             self.list.append(value)
+#             self.top+=1
+
+#     def pop(self):
+#         if self.top == -1:
+#             print("the stack is empty")
+#         else:
+#             self.list.pop()
+#             self.top-=1
+
+#     def display(self):
+#         if self.top == -1:
+#             print("the stack is empty")
+#         else:
+#             print("the stack is:")
+#             print(self)
+
+# a=stack(5,-1)
+# a.push(10)
+# a.push(20)
+# a.push(30)
+# a.display()
+# a.pop()
+# a.display()
+
+# class node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
+
+# class linkedlist:
+#     def __init__(self):
+#         self.head = None
+
+#     def insert(self,value):
+#         new_node = node(value)
+#         new_node.next = self.head
+#         self.head = new_node
+
+#     def delete(self):
+#         if self.head == None:
+#             print("list is empty")
+#         else:
+#             self.head = self.head.next
+
+#     def search(self,key):
+        
+#         present = self.head
+
+#         while present is not None:
+#             if present.data == key:
+#                 return "Present"
+            
+#             present = present.next
+
+#         return "Not present"
+    
+#     def display(self):
+#         if self.head == None:
+#             print("list is empty")
+#         else:
+#             temp = self.head
+#             while(temp):
+#                 print(str(temp.data),end = " ")
+#                 temp = temp.next
+
+# a = linkedlist()
+# a.insert(10)
+# a.insert(20)
+# a.insert(30)
+# a.display()
+# print()
+# a.delete()
+# a.display()
+# print()
+# print(a.search(30))
+
+
+# graph = {2:[3,5],6:[7,8,9],9:[2,5,8,4]}
+# print("Graph is:")
+# print(graph)
+
+# def dfs(input_graph,source):
+#     stack = list()
+#     visited_list = list()
+#     stack.append(source)
+#     visited_list.append(source)
+#     while (stack):
+#         vertex = stack.pop()
+#         print(vertex,end=" ")
+#         if vertex in input_graph:
+#             for u in input_graph[vertex]:
+#                 if u not in visited_list:
+#                     stack.append(u)
+#                     visited_list.append(u)
+
+# print("DFS Traversing: ")
+# dfs(graph,6)
+
+# from queue import Queue 
+
+# graph = {2:[3,5],6:[7,8,9],9:[2,5,8,4]}
+# print("Graph is:")
+# print(graph)
+
+# def BFS(input_graph,source):
+#     a=Queue
+#     visited_list = list()
+#     a.put(source)
+#     visited_list.append(source)
+#     while not a.empty():
+#         vertex = a.get()
+#         print(vertex, end = " ")
+#         if vertex in input_graph:
+#             for u in input_graph[vertex]:
+#                 if u not in visited_list:
+#                     a.put(u)
+#                     visited_list.append(u) 
+
+# print("BFS Traversing: ")
+# BFS(graph,9)
+
+class node:
+
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+class ll:
+
+    def __init__(self):
+        self.head = None
+
+    def insert(self,val):
+        new_node = node(val)
+        new_node.next = self.head
+        self.head = new_node
+
+    def delete(self):
+        if self.head is None:
+            print("The ll is empty")
+        else:
+            self.head = self.head.next
+
+    def search(self,val):
+        present = self.head
+        while present is not None:
+            if present.data == val:
+                return "True"
+            present = present.next
+        return "False"
+    
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data)
+            temp = temp.next
+
+a=ll()
+a.insert(10)
+a.insert(20)
+a.insert(30)
+a.display()
+print()
+a.delete()
+a.display()
+print()
+print(a.search(20))

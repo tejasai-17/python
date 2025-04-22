@@ -50,7 +50,7 @@ while True:
     option = int(input("Enter your choice\n1: Insert\n2: Delete\n3: Display\n4: Exit\n"))
 
     if option == 1:
-        value = int(input("Enter the value you want to add :: "))
+        value = int(input("Enter the value you want to add : "))
         a.enqueue(value)
         continue
 

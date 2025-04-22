@@ -19,4 +19,4 @@ if (result == -1):
 else:
     print("Element is present at index", result)
 end=time.perf_counter()
-print("the time is:",end-start)
+print("time taken =",end-start)

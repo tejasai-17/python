@@ -1,3 +1,7 @@
+import time
+
+start = time.perf_counter()
+
 open_list = ["[", "{", "("]  
 close_list = ["]", "}", ")"]  
 
@@ -24,3 +28,6 @@ string = "{[()]}("
 print(string, "-", checkP(string))
 string = "((()))"
 print(string, "-", checkP(string))
+
+end = time.perf_counter()
+print("time taken =", end-start)
